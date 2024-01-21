@@ -7,7 +7,7 @@
       "service_data_uuid": "0000a201-0000-1000-8000-00805f9b34fb"
     }
   ],
-  "codeowners": ["@PlusPlus-ua, @Snuffy2", @Mooni123],
+  "codeowners": ["@PlusPlus-ua, @Snuffy2, @Mooni123"],
   "config_flow": true,
   "dependencies": ["bluetooth_adapters", "tuya"],
   "documentation": "https://github.com/Mooni123/ha_tuya_ble",
