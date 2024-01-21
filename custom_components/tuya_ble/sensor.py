@@ -117,7 +117,7 @@ mapping: dict[str, TuyaBLECategorySensorMapping] = {
                         device_class=SensorDeviceClass.ENUM,
                         options=[
                             CO2_LEVEL_ALARM,
-                            CO2_LEVEL_NORMAL,
+                            CO2_LEVEL_NORMAL
                         ],
                     ),
                     is_available=is_co2_alarm_enabled,
@@ -145,10 +145,63 @@ mapping: dict[str, TuyaBLECategorySensorMapping] = {
             ]
         }
     ),
+    "jtmspro": TuyaBLECategorySensorMapping(
+        products={
+            "xicdxood":  # Raycube K7 Pro+
+            [
+                TuyaBLESensorMapping(
+                    dp_id=21, # Requires more testing
+                    description=SensorEntityDescription(
+                        key="alarm_lock",
+                        icon="mdi:alarm-light-outline",
+                        device_class=SensorDeviceClass.ENUM,
+                        options=[
+                            "wrong_finger",
+                            "wrong_password",
+                            "wrong_card",
+                            "wrong_face",
+                            "tongue_bad",
+                            "too_hot",
+                            "unclosed_time",
+                            "tongue_not_out",
+                            "pry",
+                            "key_in",
+                            "low_battery",
+                            "power_off",
+                            "shock",
+                            "defense"
+                        ],
+                    ),
+                ),
+                TuyaBLESensorMapping(
+                    dp_id=12, # Retrieve last fingerprint used
+                    description=SensorEntityDescription(
+                        key="unlock_fingerprint",
+                        icon="mdi:fingerprint",
+                    ),
+                ),
+                TuyaBLESensorMapping(
+                    dp_id=15, # Retrieve last card used
+                    description=SensorEntityDescription(
+                        key="unlock_card",
+                        icon="mdi:nfc-variant",
+                    ),
+                ),
+                TuyaBLESensorMapping(
+                    dp_id=13, # Retrieve last code used
+                    description=SensorEntityDescription(
+                        key="unlock_password",
+                        icon="mdi:keyboard-outline",
+                    ),
+                ),
+                TuyaBLEBatteryMapping(dp_id=8),
+            ],
+        }
+    ),
     "ms": TuyaBLECategorySensorMapping(
         products={
             **dict.fromkeys(
-                ["ludzroix", "isk2p555"], # Smart Lock
+                ["ludzroix", "isk2p555", "okkyfgfs"], # Smart Lock
                 [
                     TuyaBLESensorMapping(
                         dp_id=21,
@@ -158,7 +211,7 @@ mapping: dict[str, TuyaBLECategorySensorMapping] = {
                             options=[
                                 "wrong_finger",
                                 "wrong_password",
-                                "low_battery",
+                                "low_battery"
                             ],
                         ),
                     ),
@@ -181,13 +234,13 @@ mapping: dict[str, TuyaBLECategorySensorMapping] = {
                             options=[
                                 BATTERY_NOT_CHARGING,
                                 BATTERY_CHARGING,
-                                BATTERY_CHARGED,
+                                BATTERY_CHARGED
                             ],
                         ),
                         icons=[
                             "mdi:battery",
                             "mdi:power-plug-battery",
-                            "mdi:battery-check",
+                            "mdi:battery-check"
                         ],
                     ),
                     TuyaBLEBatteryMapping(dp_id=8),
@@ -198,6 +251,7 @@ mapping: dict[str, TuyaBLECategorySensorMapping] = {
                     "blliqpsj",
                     "ndvkgsrm",
                     "yiihr7zh",
+                    "riecov42",
                     "neq16kgd"
                 ],  # Fingerbot Plus
                 [
@@ -212,7 +266,7 @@ mapping: dict[str, TuyaBLECategorySensorMapping] = {
                     "nvr2rocq",
                     "bnt7wajf",
                     "rvdceqjh",
-                    "5xhbk964",
+                    "5xhbk964"
                 ],  # Fingerbot
                 [
                     TuyaBLEBatteryMapping(dp_id=12),
@@ -224,7 +278,8 @@ mapping: dict[str, TuyaBLECategorySensorMapping] = {
         products={
             **dict.fromkeys(
                 [
-                    "mknd4lci"
+                    "mknd4lci",
+                    "riecov42"
                 ],  # Fingerbot Plus
                 [
                     TuyaBLEBatteryMapping(dp_id=105),
@@ -234,6 +289,36 @@ mapping: dict[str, TuyaBLECategorySensorMapping] = {
     ),
     "wsdcg": TuyaBLECategorySensorMapping(
         products={
+            "04nb6kdt": [ # Temperature Humidity Sensor
+                TuyaBLETemperatureMapping(
+                    dp_id=1,
+                ),
+                TuyaBLESensorMapping(
+                    dp_id=2,
+                    description=SensorEntityDescription(
+                        key="moisture",
+                        device_class=SensorDeviceClass.MOISTURE,
+                        native_unit_of_measurement=PERCENTAGE,
+                        state_class=SensorStateClass.MEASUREMENT,
+                    ),
+                ),
+                TuyaBLEBatteryMapping(dp_id=4),
+            ],
+            "zqeaw7pi": [ # Temperature Humidity Sensor
+                TuyaBLETemperatureMapping(
+                    dp_id=1,
+                ),
+                TuyaBLESensorMapping(
+                    dp_id=2,
+                    description=SensorEntityDescription(
+                        key="moisture",
+                        device_class=SensorDeviceClass.MOISTURE,
+                        native_unit_of_measurement=PERCENTAGE,
+                        state_class=SensorStateClass.MEASUREMENT,
+                    ),
+                ),
+                TuyaBLEBatteryMapping(dp_id=4),
+            ],
             "ojzlzzsw": [  # Soil moisture sensor
                 TuyaBLETemperatureMapping(
                     dp_id=1,
@@ -258,13 +343,13 @@ mapping: dict[str, TuyaBLECategorySensorMapping] = {
                         options=[
                             BATTERY_STATE_LOW,
                             BATTERY_STATE_NORMAL,
-                            BATTERY_STATE_HIGH,
+                            BATTERY_STATE_HIGH
                         ],
                     ),
                     icons=[
                         "mdi:battery-alert",
                         "mdi:battery-50",
-                        "mdi:battery-check",
+                        "mdi:battery-check"
                     ],
                 ),
                 TuyaBLEBatteryMapping(dp_id=4),
@@ -317,6 +402,23 @@ mapping: dict[str, TuyaBLECategorySensorMapping] = {
             ],
         },
     ),
+     "cl": TuyaBLECategorySensorMapping(
+         products={
+             "kcy0x4pi": [  # Smart curtain robot
+                 TuyaBLEBatteryMapping(dp_id=13),
+    #             TuyaBLETemperatureMapping(dp_id=103),
+    #             TuyaBLESensorMapping(
+    #                 dp_id=104,
+    #                 description=SensorEntityDescription(
+    #                     key="Luminosity",
+    #                     device_class=SensorDeviceClass.ILLUMINANCE,
+    #                     native_unit_of_measurement=PERCENTAGE,
+    #                     state_class=SensorStateClass.MEASUREMENT,
+    #                 ),
+    #             ),
+             ],
+         },
+     ),
 }
 
 
@@ -437,3 +539,4 @@ async def async_setup_entry(
                 )
             )
     async_add_entities(entities)
+

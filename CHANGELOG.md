@@ -85,3 +85,14 @@ and this project adheres to [Semantic Versioning].
 
 - Connection to the device is postponed now. Previously some out of range device might prevents HA from fully booting.
 - Improved connection stability.
+
+## [0.2.2] - 2024-01-21
+
+### Added
+- Added Temperature Humidity Sensor (Product id 04nb6kdt). Thanks alex-volga
+- Added Temperature Humidity Sensor (Product id zqeaw7pi)
+
+### Changed
+
+- Fix for HA 2024.1 . Thanks Snuffy2
+

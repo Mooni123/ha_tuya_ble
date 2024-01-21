@@ -189,6 +189,7 @@ mapping: dict[str, TuyaBLECategorySwitchMapping] = {
                     "blliqpsj",
                     "ndvkgsrm",
                     "yiihr7zh",
+                    "riecov42",
                     "neq16kgd"
                 ],  # Fingerbot Plus
                 [
@@ -244,7 +245,8 @@ mapping: dict[str, TuyaBLECategorySwitchMapping] = {
         products={
             **dict.fromkeys(
                 [
-                    "mknd4lci"
+                    "mknd4lci",
+                    "riecov42"
                 ],  # Fingerbot Plus
                 [
                     TuyaBLEFingerbotSwitchMapping(dp_id=1),
@@ -342,6 +344,17 @@ mapping: dict[str, TuyaBLECategorySwitchMapping] = {
     ),
     "wsdcg": TuyaBLECategorySwitchMapping(
         products={
+            "04nb6kdt": [  # Temperature Humidity Sensor
+                TuyaBLESwitchMapping(
+                    dp_id=21,
+                    description=SwitchEntityDescription(
+                        key="switch",
+                        icon="mdi:thermometer",
+                        entity_category=EntityCategory.CONFIG,
+                        entity_registry_enabled_default=False,
+                    ),
+                ),
+            ],
             "ojzlzzsw": [  # Soil moisture sensor
                 TuyaBLESwitchMapping(
                     dp_id=21,

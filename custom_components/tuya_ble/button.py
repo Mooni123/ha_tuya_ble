@@ -72,6 +72,7 @@ mapping: dict[str, TuyaBLECategoryButtonMapping] = {
                 [
                     "blliqpsj",
                     "ndvkgsrm",
+                    "riecov42",         
                     "yiihr7zh",
                     "neq16kgd"
                 ],  # Fingerbot Plus
@@ -99,13 +100,35 @@ mapping: dict[str, TuyaBLECategoryButtonMapping] = {
         products={
             **dict.fromkeys(
                 [
-                    "mknd4lci"
+                    "mknd4lci",
+                    "riecov42"
                 ],  # Fingerbot Plus
                 [
                     TuyaBLEFingerbotModeMapping(dp_id=108),
                 ],
             ),
         },
+    ),
+    "ms": TuyaBLECategoryButtonMapping(
+        products={
+            **dict.fromkeys(
+                ["okkyfgfs"], # Smart Lock
+                [
+                    TuyaBLEButtonMapping(
+                        dp_id=6,
+                        description=ButtonEntityDescription(
+                            key="bluetooth_unlock",
+                        ),
+                    ),
+                    #TuyaBLEButtonMapping(
+                    #    dp_id=12,
+                    #    description=ButtonEntityDescription(
+                    #        key="unlock_fingerprint",
+                    #    ),
+                    #),
+                ]
+            ),
+        }
     ),
     "znhsb": TuyaBLECategoryButtonMapping(
         products={
@@ -115,6 +138,20 @@ mapping: dict[str, TuyaBLECategoryButtonMapping] = {
                     dp_id=109,
                     description=ButtonEntityDescription(
                         key="bright_lid_screen",
+                    ),
+                ),
+            ],
+        },
+    ),
+    "jtmspro": TuyaBLECategoryButtonMapping(
+        products={
+            "xicdxood":  # Raycube K7 Pro+
+            [
+                TuyaBLEButtonMapping(
+                    dp_id=71, # On click it opens the lock, just like connecting via Smart Life App and holding the center button
+                    description=ButtonEntityDescription(
+                        key="ble_unlock_check",
+                        icon="mdi:lock-open-variant-outline",
                     ),
                 ),
             ],

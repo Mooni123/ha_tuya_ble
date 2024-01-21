@@ -181,12 +181,20 @@ devices_database: dict[str, TuyaBLECategoryInfo] = {
             ),
         },
     ),
+    "jtmspro": TuyaBLECategoryInfo(
+        products={
+            "xicdxood": TuyaBLEProductInfo(  # device product_id
+                name="Raycube K7 Pro+",
+            ),
+        },
+    ),
     "ms": TuyaBLECategoryInfo(
         products={
             **dict.fromkeys(
                 [
                     "ludzroix",
-                    "isk2p555"
+                    "isk2p555",
+                    "okkyfgfs"
                 ],
                     TuyaBLEProductInfo(  # device product_id
                     name="Smart Lock",
@@ -223,6 +231,7 @@ devices_database: dict[str, TuyaBLECategoryInfo] = {
                     "blliqpsj",
                     "ndvkgsrm",
                     "yiihr7zh",
+                    "riecov42",
                     "neq16kgd"
                 ],  # device product_ids
                 TuyaBLEProductInfo(
@@ -268,7 +277,8 @@ devices_database: dict[str, TuyaBLECategoryInfo] = {
         products={
             **dict.fromkeys(
                 [
-                    "mknd4lci"
+                    "mknd4lci",
+                    "riecov42"
                 ],  # device product_ids
                 TuyaBLEProductInfo(
                     name="Fingerbot Plus",
@@ -291,7 +301,7 @@ devices_database: dict[str, TuyaBLECategoryInfo] = {
             **dict.fromkeys(
             [
             "drlajpqc",
-            "nhj2j7su",
+            "nhj2j7su"
             ],  # device product_id
             TuyaBLEProductInfo(
                 name="Thermostatic Radiator Valve",
@@ -303,6 +313,12 @@ devices_database: dict[str, TuyaBLECategoryInfo] = {
         products={
             "ojzlzzsw": TuyaBLEProductInfo(  # device product_id
                 name="Soil moisture sensor",
+            ),
+            "04nb6kdt": TuyaBLEProductInfo(  # device product_id
+                name="Temperature Humidity Sensor",
+            ),
+            "zqeaw7pi": TuyaBLEProductInfo(  # device product_id
+                name="Temperature Humidity Sensor",
             ),
         },
     ),
@@ -319,6 +335,14 @@ devices_database: dict[str, TuyaBLECategoryInfo] = {
             "6pahkcau":  # device product_id
             TuyaBLEProductInfo(
                 name="Irrigation computer",
+            ),
+        },
+    ),
+    "cl": TuyaBLECategoryInfo(
+        products={
+            "kcy0x4pi":  # device product_id
+            TuyaBLEProductInfo(
+                name="Smart curtain robot",
             ),
         },
     ),

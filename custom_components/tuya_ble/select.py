@@ -85,7 +85,7 @@ mapping: dict[str, TuyaBLECategorySelectMapping] = {
     "ms": TuyaBLECategorySelectMapping(
         products={
             **dict.fromkeys(
-                ["ludzroix", "isk2p555"], # Smart Lock
+                ["ludzroix", "isk2p555","okkyfgfs"], # Smart Lock
                 [
                     TuyaBLESelectMapping(
                         dp_id=31,
@@ -117,6 +117,7 @@ mapping: dict[str, TuyaBLECategorySelectMapping] = {
                     "blliqpsj",
                     "ndvkgsrm",
                     "yiihr7zh",
+                    "riecov42",
                     "neq16kgd"
                 ],  # Fingerbot Plus
                 [
@@ -137,7 +138,8 @@ mapping: dict[str, TuyaBLECategorySelectMapping] = {
         products={
             **dict.fromkeys(
                 [
-                    "mknd4lci"
+                    "mknd4lci",
+                    "riecov42"
                 ],  # Fingerbot Plus
                 [
                     TuyaBLEFingerbotModeMapping(dp_id=101),
@@ -148,6 +150,19 @@ mapping: dict[str, TuyaBLECategorySelectMapping] = {
     "wsdcg": TuyaBLECategorySelectMapping(
         products={
             "ojzlzzsw":  # Soil moisture sensor
+            [
+                TuyaBLESelectMapping(
+                    dp_id=9,
+                    description=TemperatureUnitDescription(
+                        options=[
+                            UnitOfTemperature.CELSIUS,
+                            UnitOfTemperature.FAHRENHEIT,
+                        ],
+                        entity_registry_enabled_default=False,
+                    )
+                ),
+            ],
+            "zqeaw7pi":  # Temperature Humidity Sensor
             [
                 TuyaBLESelectMapping(
                     dp_id=9,
@@ -215,6 +230,40 @@ mapping: dict[str, TuyaBLECategorySelectMapping] = {
                 ),
             ],
         },
+    ),
+    "jtmspro": TuyaBLECategorySelectMapping(
+        products={
+            "xicdxood":  # Raycube K7 Pro+
+            [
+                TuyaBLESelectMapping(
+                    dp_id=31,
+                    description=SelectEntityDescription(
+                        key="beep_volume",
+                        options=[
+                            "Mute",
+                            "Low",
+                            "Normal",
+                            "High",
+                        ],
+                        entity_category=EntityCategory.CONFIG,
+                    ),
+                ),
+                TuyaBLESelectMapping(
+                    dp_id=28,
+                    description=SelectEntityDescription(
+                        key="language",
+                        options=[
+                            "Chinese Simplified",
+                            "English",
+                            "Arabic",
+                            "Indonesian",
+                            "Portuguese",
+                        ],
+                        entity_category=EntityCategory.CONFIG,
+                    ),
+                ),
+            ],
+        }
     ),
 }
 

@@ -5,8 +5,9 @@
 This integration supports Tuya devices connected via BLE.
 
 _Inspired by code of [@redphx](https://github.com/redphx/poc-tuya-ble-fingerbot) & forked from https://github.com/PlusPlus-ua/ha_tuya_ble_
+_Added some Tuya BLE devices by Mooni123
 
-## Installation
+ ## Installation
 
 Place the `custom_components` folder in your configuration directory (or add its contents to an existing `custom_components` folder). Alternatively install via [HACS](https://hacs.xyz/).
 
@@ -23,7 +24,7 @@ The integration works locally, but connection to Tuya BLE device requires device
 * Fingerbots (category_id 'szjqr')
   + Fingerbot (product_ids 'ltak7e1p', 'y6kttvd6', 'yrnk7mnn', 'nvr2rocq', 'bnt7wajf', 'rvdceqjh', '5xhbk964'), original device, first in category, powered by CR2 battery.
   + Adaprox Fingerbot (product_id 'y6kttvd6'), built-in battery with USB type C charging.
-  + Fingerbot Plus (product_ids 'blliqpsj', 'ndvkgsrm', 'yiihr7zh', 'neq16kgd', 'mknd4lci'), almost same as original, has sensor button for manual control.
+  + Fingerbot Plus (product_ids 'blliqpsj', 'ndvkgsrm', 'yiihr7zh', 'neq16kgd', 'mknd4lci', 'riecov42'), almost same as original, has sensor button for manual control.
   + CubeTouch 1s (product_id '3yqdo5yt'), built-in battery with USB type C charging.
   + CubeTouch II (product_id 'xhf790if'), built-in battery with USB type C charging.
 
@@ -32,12 +33,14 @@ The integration works locally, but connection to Tuya BLE device requires device
 
 * Temperature and humidity sensors (category_id 'wsdcg')
   + Soil moisture sensor (product_id 'ojzlzzsw').
+  + Temperature Humidity Sensor (product_ids '04nb6kdt', 'zqeaw7pi')
 
 * CO2 sensors (category_id 'co2bj')
   + CO2 Detector (product_id '59s19z5m').
 
-* Smart Locks (category_id 'ms')
+* Smart Locks (category_id 'ms', 'jtmspro')
   + Smart Lock (product_id 'ludzroix', 'isk2p555').
+  + Raybuke K7 Pro+ (product_id 'xicdxood'), supports ble unlock and other small features
 
 * Climate (category_id 'wk')
   + Thermostatic Radiator Valve (product_ids 'drlajpqc', 'nhj2j7su').
@@ -48,7 +51,7 @@ The integration works locally, but connection to Tuya BLE device requires device
 * Irrigation computer (category_id 'ggq')
   + Irrigation computer (product_id '6pahkcau')
 
-## Support original developer @PlusPlus-ua, not me:
+## Note that the original hasn't been updated in a long time, still, Support original developer @PlusPlus-ua:
 
 I am working on this integration in Ukraine. Our country was subjected to brutal aggression by Russia. The war still continues. The capital of Ukraine - Kyiv, where I live, and many other cities and villages are constantly under threat of rocket attacks. Our air defense forces are doing wonders, but they also need support. So if you want to help the development of this integration, donate some money and I will spend it to support our air defense.
 <br><br>
